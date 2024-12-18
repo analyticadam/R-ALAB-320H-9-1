@@ -11,6 +11,14 @@ function ToDoItems({ task, dispatch }) {
 			</div>
 			<div>
 				<ActionButton
+					type={"edit-task"}
+					payload={{ title: task.title }}
+					dispatch={dispatch}
+				>
+					Edit
+				</ActionButton>
+
+				<ActionButton
 					type="remove-task"
 					payload={{ title: task.title }}
 					dispatch={dispatch}
