@@ -1,6 +1,15 @@
-export default function ActionButton({ children, dispatch, type, payload }) {
+export default function ActionButton({
+	children,
+	dispatch,
+	disabled,
+	type,
+	payload,
+}) {
 	return (
-		<button onClick={() => dispatch({ type: type, payload: payload })}>
+		<button
+			onClick={() => dispatch({ type: type, payload: payload })}
+			disabled={disabled}
+		>
 			{children}
 		</button>
 	);
